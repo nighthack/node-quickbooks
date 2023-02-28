@@ -1,6 +1,6 @@
 {
-  "name": "node-quickbooks",
-  "version": "2.0.41",
+  "name": "@nighthack/node-quickbooks",
+  "version": "2.0.42",
   "description": "node.js client for Intuit's IPP QuickBooks V3 API.",
   "main": "index.js",
   "scripts": {
@@ -35,12 +35,15 @@
     "example": "example",
     "test": "test"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcohen01/node-quickbooks.git"
+    "url": "https://github.com/nighthack/node-quickbooks.git"
   },
   "bugs": {
-    "url": "https://github.com/mcohen01/node-quickbooks/issues"
+    "url": "https://github.com/nighthack/node-quickbooks/issues"
   },
-  "homepage": "https://github.com/mcohen01/node-quickbooks"
+  "homepage": "https://github.com/nighthack/node-quickbooks"
 }
