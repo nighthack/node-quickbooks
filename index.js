@@ -1062,6 +1062,16 @@ QuickBooks.prototype.getTaxCode = function (id, callback) {
 };
 
 /**
+ * Retrieves the TaxClassification from QuickBooks
+ *
+ * @param  {string} Id - The Id of persistent TaxCode
+ * @param  {function} callback - Callback function which is called with any error and the persistent TaxClassification
+ */
+QuickBooks.prototype.getTaxClassification = function (id, callback) {
+  module.read(this, "taxClassification", id, callback);
+};
+
+/**
  * Retrieves the TaxRate from QuickBooks
  *
  * @param  {string} Id - The Id of persistent TaxRate
