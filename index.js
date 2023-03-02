@@ -2422,6 +2422,19 @@ QuickBooks.prototype.reportVendorBalanceDetail = function (options, callback) {
 };
 
 /**
+ * Retrieves the TransactionListByVendor Report from QuickBooks
+ *
+ * @param  {object} options - (Optional) Map of key-value pairs passed as options to the Report
+ * @param  {function} callback - Callback function which is called with any error and the TransactionListByVendor Report
+ */
+QuickBooks.prototype.reportTransactionListByVendor = function (
+  options,
+  callback
+) {
+  module.report(this, "TransactionListByVendor", options, callback);
+};
+
+/**
  * Retrieves the AgedPayables Report from QuickBooks
  *
  * @param  {object} options - (Optional) Map of key-value pairs passed as options to the Report
