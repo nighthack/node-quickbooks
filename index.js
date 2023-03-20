@@ -2120,6 +2120,23 @@ QuickBooks.prototype.findTaxCodes = function (criteria, callback) {
 };
 
 /**
+ * Finds all CustomerType in QuickBooks, optionally matching the specified criteria
+ *
+ * @param  {object} criteria - (Optional) String or single-valued map converted to a where clause of the form "where key = 'value'"
+ * @param  {function} callback - Callback function which is called with any error and the list of CustomerType
+ */
+QuickBooks.prototype.findCustomerTypes = function (criteria, callback) {
+  module
+    .query(this, "customerType", criteria)
+    .then(function (data) {
+      (callback || criteria)(null, data);
+    })
+    .catch(function (err) {
+      (callback || criteria)(err, err);
+    });
+};
+
+/**
  * Finds all TaxClassification in QuickBooks, optionally matching the specified criteria
  *
  * @param  {object} criteria - (Optional) String or single-valued map converted to a where clause of the form "where key = 'value'"
